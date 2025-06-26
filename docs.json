@@ -3,54 +3,70 @@
   "theme": "mint",
   "name": "Magic Docs",
   "colors": {
-    "primary": "#16A34A",
-    "light": "#07C983",
-    "dark": "#15803D"
+    "primary": "#19C1CE",
+    "light": "#07E5EB",
+    "dark": "#0B485B"
   },
   "favicon": "/favicon.svg",
   "navigation": {
-    "tabs": [
+    "languages": [
       {
-        "tab": "Guides",
-        "groups": [
+        "language": "en",
+        "tabs": [
           {
-            "group": "Get Started",
+            "tab": "Documentation",
+            "icon": "book",
             "pages": [
-              "index",
-              "quickstart",
-              "development"
+              {
+                "group": "Getting started",
+                "pages": [
+                  "index",
+                  "quickstart"
+                ]
+              }
             ]
+          },
+          {
+            "tab": "Contas - API",
+            "openapi": "https://api.contas.staging.rdstationmentoria.com.br/rest"
+          },
+          {
+            "tab": "Meu Assistente - API",
+            "openapi": "https://api.meuassistente.staging.rdstationmentoria.com.br/rest"
+          },
+          {
+            "tab": "Base de Conhecimento - API",
+            "openapi": "https://api.bases.staging.rdstationmentoria.com.br/rest"
+          },
+          {
+            "tab": "Conteúdo - API",
+            "openapi": "https://api.conteudo.rdstationmentoria.com.br/rest"
           }
         ]
       },
       {
-        "tab": "API Reference",
-        "openapi": "https://api.meuassistente.staging.rdstationmentoria.com.br/rest"
+        "language": "pt-BR",
+        "tabs": [
+          {
+            "tab": "Documentação",
+            "icon": "book",
+            "pages": [
+              {
+                "group": "Começando",
+                "pages": [
+                  "/pt/introduction",
+                  "/pt/quickstart"
+                ]
+              }
+            ]
+          }
+        ]
       }
-    ],
-    "global": {
-      "anchors": [
-        {
-          "anchor": "Documentation",
-          "href": "https://mintlify.com/docs",
-          "icon": "book-open-cover"
-        },
-        {
-          "anchor": "Community",
-          "href": "https://mintlify.com/community",
-          "icon": "slack"
-        },
-        {
-          "anchor": "Blog",
-          "href": "https://mintlify.com/blog",
-          "icon": "newspaper"
-        }
-      ]
-    }
+    ]
   },
   "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
+    "light": "/images/logo-rdstation-azul-escuro.png",
+    "dark": "/images/logo-rdstation-branco.png"
   },
   "navbar": {
     "links": [
