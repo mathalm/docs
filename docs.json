@@ -59,6 +59,22 @@
                 ]
               }
             ]
+          },
+          {
+            "tab": "Contas - API",
+            "openapi": "https://api.contas.staging.rdstationmentoria.com.br/rest"
+          },
+          {
+            "tab": "Meu Assistente - API",
+            "openapi": "https://api.meuassistente.staging.rdstationmentoria.com.br/rest"
+          },
+          {
+            "tab": "Base de Conhecimento - API",
+            "openapi": "https://api.bases.staging.rdstationmentoria.com.br/rest"
+          },
+          {
+            "tab": "Conteúdo - API",
+            "openapi": "https://api.conteudo.rdstationmentoria.com.br/rest"
           }
         ]
       }
