@@ -1,27 +1,94 @@
 ---
-title: 'Início rápido'
-description: 'Siga o tutorial de 10 minutos para entender como Searching funciona'
+title: 'Comece Rápido'
+description: 'Siga este tutorial de 10 minutos para entender como funciona a Busca'
 ---
 
-## Introdução
+## 🚀 Introdução
 
-Este guia apresenta uma visão geral sobre o Searching.
+Este guia mostra passo a passo um exemplo real usando o endpoint **Obter contas**. Você verá como fazer uma requisição, lidar com a resposta e integrá-la ao seu aplicativo.
 
 <Tip>
-  Consulte a [API de Enriquecimentos](/enrichments) para obter exemplos de
-  solicitações usando a sua linguagem de programação favorita.
+  Quer exemplos prontos na sua linguagem favorita? Veja a [referência do
+  endpoint Obter Contas](/api-reference/accounts/get-accounts).
 </Tip>
 
-## Pré-requisitos
+---
+
+## 🔧 Pré-requisitos
+
+Antes de começar, certifique-se de que você tem o seguinte:
 
 <AccordionGroup>
-  <Accordion icon="key" title="Obtenha uma chave de API">
-    As APIs da plataforma são protegidas. Solicite a sua chave de API através
-    [deste formulário](https://forms.gle/tGRn47Py1UrtiF3F9).
+  <Accordion icon="key" title="Obtenha sua chave de API">
+    Pegue sua chave de API em **Contas → Configurações → Chaves de API** – ela é
+    necessária para autenticação. Mantenha-a segura e não a compartilhe
+    publicamente.
   </Accordion>
-  <Accordion icon="rectangle-terminal" title="Instale um cliente de API">
-    Você pode seguir o tutorial com o seu cliente de API favorito, mas
-    recomendamos que utilize [Postman](https://www.postman.com/),
-    [Insomnia](https://insomnia.rest/) ou [cURL](https://curl.se/).
+  <Accordion icon="rectangle-terminal" title="Escolha um cliente HTTP">
+    Você pode continuar com **Postman**, **Insomnia** ou **cURL** (exemplo
+    abaixo). Certifique-se de que seu cliente esteja instalado e configurado
+    corretamente.
   </Accordion>
 </AccordionGroup>
+
+---
+
+## 📂 1. Visão Geral do Endpoint
+
+O endpoint **Obter contas** permite recuperar todas as contas conectadas ao seu workspace. Abaixo está o formato da requisição:
+
+```http
+GET https://api.contas.rdstationmentoria.com.br/rest/accounts
+Authorization: Bearer <SEU_TOKEN>
+```
+
+### Cabeçalhos
+
+- **Authorization**: Use sua chave de API no formato `Bearer SUA_API_KEY`.
+
+---
+
+## 🧪 2. Exemplo de Requisição (cURL)
+
+Veja como fazer uma requisição usando `cURL`. Substitua `SUA_API_KEY` pela sua chave real:
+
+```bash
+curl --request GET \
+  --url https://api.contas.rdstationmentoria.com.br/rest/accounts \
+  --header "Authorization: Bearer SUA_API_KEY"
+```
+
+<Tip>
+  Se você encontrar problemas, verifique se sua chave de API é válida e se sua
+  rede permite requisições HTTPS de saída.
+</Tip>
+
+---
+
+## ✅ 3. Resposta de Exemplo
+
+Uma resposta bem-sucedida retornará um array JSON contendo os detalhes das contas. Veja um exemplo:
+
+```json
+[
+  {
+    "id": "123",
+    "platform": "rd",
+    "platformId": "456",
+    "description": null,
+    "createdBy": null,
+    "updatedBy": null,
+    "createdAt": "2025-06-26T19:18:55.132Z",
+    "updatedAt": "2025-06-26T19:18:55.132Z",
+    "workspaceId": "789"
+  }
+]
+```
+
+---
+
+## 📘 Próximos Passos
+
+- Explore outros endpoints na [Referência da API](/api-reference/accounts/get-accounts).
+- Aprenda como lidar com erros e tentativas novamente para integrações mais robustas.
+- Veja casos de uso avançados para gerenciar contas programaticamente.

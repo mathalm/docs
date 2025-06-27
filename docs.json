@@ -1,17 +1,31 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
-  "name": "Magic Docs",
+  "name": "Mentor IA - API",
   "colors": {
     "primary": "#19C1CE",
     "light": "#07E5EB",
     "dark": "#0B485B"
   },
-  "favicon": "/favicon.svg",
+  "favicon": "images/favicon.ico",
   "navigation": {
     "languages": [
       {
         "language": "en",
+        "global": {
+          "anchors": [
+            {
+              "anchor": "Help Center",
+              "href": "https://ajuda.rdstation.com/s/mentor-IA?language=pt_BR",
+              "icon": "book-open-cover"
+            },
+            {
+              "anchor": "Blog",
+              "href": "https://www.rdstation.com/produtos/mentor-ia/",
+              "icon": "newspaper"
+            }
+          ]
+        },
         "tabs": [
           {
             "tab": "Documentation",
@@ -28,15 +42,15 @@
           },
           {
             "tab": "Contas - API",
-            "openapi": "https://api.contas.staging.rdstationmentoria.com.br/rest"
+            "openapi": "https://api.contas.rdstationmentoria.com.br/rest"
           },
           {
             "tab": "Meu Assistente - API",
-            "openapi": "https://api.meuassistente.staging.rdstationmentoria.com.br/rest"
+            "openapi": "https://api.meuassistente.rdstationmentoria.com.br/rest"
           },
           {
             "tab": "Base de Conhecimento - API",
-            "openapi": "https://api.bases.staging.rdstationmentoria.com.br/rest"
+            "openapi": "https://api.bases.rdstationmentoria.com.br/rest"
           },
           {
             "tab": "Conteúdo - API",
@@ -46,6 +60,20 @@
       },
       {
         "language": "pt-BR",
+        "global": {
+          "anchors": [
+            {
+              "anchor": "Central de ajuda",
+              "href": "https://ajuda.rdstation.com/s/mentor-IA?language=pt_BR",
+              "icon": "book-open-cover"
+            },
+            {
+              "anchor": "Site",
+              "href": "https://www.rdstation.com/produtos/mentor-ia/",
+              "icon": "newspaper"
+            }
+          ]
+        },
         "tabs": [
           {
             "tab": "Documentação",
@@ -54,23 +82,23 @@
               {
                 "group": "Começando",
                 "pages": [
-                  "/pt/introduction",
-                  "/pt/quickstart"
+                  "pt/introduction",
+                  "pt/quickstart"
                 ]
               }
             ]
           },
           {
             "tab": "Contas - API",
-            "openapi": "https://api.contas.staging.rdstationmentoria.com.br/rest"
+            "openapi": "https://api.contas.rdstationmentoria.com.br/rest"
           },
           {
             "tab": "Meu Assistente - API",
-            "openapi": "https://api.meuassistente.staging.rdstationmentoria.com.br/rest"
+            "openapi": "https://api.meuassistente.rdstationmentoria.com.br/rest"
           },
           {
             "tab": "Base de Conhecimento - API",
-            "openapi": "https://api.bases.staging.rdstationmentoria.com.br/rest"
+            "openapi": "https://api.bases.rdstationmentoria.com.br/rest"
           },
           {
             "tab": "Conteúdo - API",
@@ -88,13 +116,13 @@
     "links": [
       {
         "label": "Support",
-        "href": "mailto:hi@mintlify.com"
+        "href": "https://go.crisp.chat/chat/embed/?website_id=897d13ec-6e3a-4386-b8c0-65c5ea8bc595"
       }
     ],
     "primary": {
       "type": "button",
-      "label": "Dashboard",
-      "href": "https://dashboard.mintlify.com"
+      "label": "Login",
+      "href": "https://contas.rdstationmentoria.com.br/auth/login"
     }
   },
   "footer": {

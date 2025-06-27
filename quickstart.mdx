@@ -1,27 +1,92 @@
 ---
 title: 'Quickstart'
-description: 'Follow the 10-minute tutorial to understand how Searching works'
+description: 'Follow this 10‑minute tutorial to understand how Searching works'
 ---
 
-## Introduction
+## 🚀 Introduction
 
-This guide provides an overview of Searching.
+This guide walks you step-by-step through a real example using the **Get accounts** endpoint. You’ll see how to make a request, handle the response, and integrate it into your app.
 
 <Tip>
-  Check out the [Enrichments API](/enrichments) for examples of requests using
-  your favorite programming language.
+  Want ready-made examples in your favorite language? Check out the [Get
+  Accounts endpoint reference](/api-reference/accounts/get-accounts).
 </Tip>
 
-## Prerequisites
+---
+
+## 🔧 Prerequisites
+
+Before you begin, ensure you have the following:
 
 <AccordionGroup>
-  <Accordion icon="key" title="Get an API key">
-    The platform APIs are protected. Request your API key through [this
-    form](https://forms.gle/tGRn47Py1UrtiF3F9).
+  <Accordion icon="key" title="Obtain your API key">
+    Grab your API key from **Accounts → Settings → API Keys** – it's required
+    for authorization. Keep it secure and do not share it publicly.
   </Accordion>
-  <Accordion icon="rectangle-terminal" title="Install an API client">
-    You can follow the tutorial with your favorite API client, but we recommend
-    using [Postman](https://www.postman.com/),
-    [Insomnia](https://insomnia.rest/), or [cURL](https://curl.se/).
+  <Accordion icon="rectangle-terminal" title="Choose an HTTP client">
+    You can continue with **Postman**, **Insomnia**, or **cURL** (example
+    below). Ensure your client is installed and configured correctly.
   </Accordion>
 </AccordionGroup>
+
+---
+
+## 📂 1. Endpoint Overview
+
+The **Get accounts** endpoint allows you to retrieve all connected accounts in your workspace. Below is the request format:
+
+```http
+GET https://api.contas.rdstationmentoria.com.br/rest/accounts
+Authorization: Bearer <YOUR_TOKEN>
+```
+
+### Headers
+
+- **Authorization**: Use your API key in the format `Bearer YOUR_API_KEY`.
+
+---
+
+## 🧪 2. Example Request (cURL)
+
+Here’s how to make a request using `cURL`. Replace `YOUR_API_KEY` with your actual API key:
+
+```bash
+curl --request GET \
+  --url https://api.contas.rdstationmentoria.com.br/rest/accounts \
+  --header "Authorization: Bearer YOUR_API_KEY"
+```
+
+<Tip>
+  If you encounter issues, ensure your API key is valid and your network allows
+  outbound HTTPS requests.
+</Tip>
+
+---
+
+## ✅ 3. Sample Response
+
+A successful response will return a JSON array containing account details. Below is an example:
+
+```json
+[
+  {
+    "id": "123",
+    "platform": "rd",
+    "platformId": "456",
+    "description": null,
+    "createdBy": null,
+    "updatedBy": null,
+    "createdAt": "2025-06-26T19:18:55.132Z",
+    "updatedAt": "2025-06-26T19:18:55.132Z",
+    "workspaceId": "789"
+  }
+]
+```
+
+---
+
+## 📘 Next Steps
+
+- Explore other endpoints in the [API Reference](/api-reference).
+- Learn how to handle errors and retries for robust integrations.
+- Check out advanced use cases for managing accounts programmatically.
